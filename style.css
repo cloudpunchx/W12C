@@ -1,0 +1,13 @@
+#newPost{
+    display: grid;
+    justify-items: start;
+    align-items: center;
+}
+
+#postSubmit{
+    margin-top: 10px;
+}
+
+button{
+    margin: 10px;
+}

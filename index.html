@@ -7,9 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="newPost">
+        <h4>Create/Amend Post</h4>
+        <label for="title">Title</label>
+        <input type="text" id="title">
+        <label for="userId">User Id</label>
+        <input type="text" id="userId">
+        <label for="body">Body</label>
+        <input type="text" id="body">
+        <button id="postSubmit">Send</button>
+        <!-- I only have the Body input set for PATCHing the api Post so just use Body Input Field for PATCH -->
+        <button id="amendSubmit">Amend Body of Post</button>
+        <button id="deleteSubmit">Delete Post</button>
+        <button id="clearResults">Clear Post Results</button>
+    </div>
+    <div id="results">
+
+    </div>
 </body>
 </html>
