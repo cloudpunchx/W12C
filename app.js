@@ -53,10 +53,26 @@ function deletePostSuccess(response){
 }
 
 // GET request to show all Posts:
+// run script on startup, not as a function but the function is set off within the API call
 axios.request({
     url: `https://jsonplaceholder.typicode.com/posts`,
-    method: `GET`
+    method: `GET`,
 }).then(allPostSuccess).catch(postFailure);
+
+// 2nd API call for Comments
+// leaving as comment so i can ask and come back to this later
+// axios.request({
+//     url: `https://jsonplaceholder.typicode.com/posts/1/comments`,
+//     method: `GET`,
+// }).then(allPostSuccess).catch(postFailure);
+
+// rubber duck:
+// we have 2 endpoints
+// GET is working on each individually, can see the obj in debugger
+// when I get to function allPostSuccess, I can either get 1 or the other API to work, not both
+// the data = response.data is what's not letting me use 2 API because they're both response.data
+// and the comments are under response.data.email (or whatever it should be)
+// so need to get both to work inside function and insert on page
 
 function allPostSuccess(response){
     let data = response.data;
